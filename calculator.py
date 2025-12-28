@@ -23,6 +23,11 @@ def divide(a, b):
     return a / b
 
 
+def power(a, b):
+    """Power function"""
+    return a ** b
+
+
 def calculator():
     """Main calculator function"""
     print("=" * 40)
@@ -33,16 +38,17 @@ def calculator():
     print("2. Subtract")
     print("3. Multiply")
     print("4. Divide")
-    print("5. Exit")
+    print("5. Power")
+    print("6. Exit")
 
     while True:
-        choice = input("\nEnter choice (1-5): ")
+        choice = input("\nEnter choice (1-6): ")
 
-        if choice == "5":
+        if choice == "6":
             print("Thank you for using the calculator!")
             break
 
-        if choice in ["1", "2", "3", "4"]:
+        if choice in ["1", "2", "3", "4", "5"]:
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
 
@@ -54,8 +60,10 @@ def calculator():
                 print(f"Result: {num1} * {num2} = {multiply(num1, num2)}")
             elif choice == "4":
                 print(f"Result: {num1} / {num2} = {divide(num1, num2)}")
+            elif choice == "5":
+                print(f"Result: {num1} ^ {num2} = {power(num1, num2)}")
         else:
-            print("Invalid choice! Please select 1-5")
+            print("Invalid choice! Please select 1-6")
 
 
 if __name__ == "__main__":
