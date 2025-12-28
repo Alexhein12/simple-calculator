@@ -1,5 +1,17 @@
+
+
 # Simple Calculator Program
 # Created by: Your Name
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+MY_PAT = os.getenv("MY_PAT")
+
+print("=" * 40)
+print(f"MY_PAT ENV VARIABLE: {MY_PAT}")
+print("=" * 40)
 
 def add(a, b):
     """Add two numbers"""
